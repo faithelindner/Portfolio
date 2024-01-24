@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title id="title">
+    future billionaire -Love
+</title>
+    </head>
+    <body style="background-color:white;">
+        <h2 id="changetext" style="color: blueviolet;">LOVE</h2>
+        <button style="background-color: blue; color:white ;" onclick="spreadfunction()">spread</button>
+        <button onclick="rollback()">rollback</button>
+        <button onclick="changesize('minus')">-</button>
+        <button onclick="changesize('plus')">+</button>
+        
+        <p></p>
+        <input id="titleinput"/>
+        
+    </body>
+     <script>
+        function spreadfunction() {
+            document.getElementById("changetext").innerText=document.getElementById("changetext").innerText.split("").join(" ");
+        }
+        document.getElementById("titleinput").addEventListener("change",changeTitle);
+        function changeTitle(){
+            document.getElementById("changetext").innerText=document.getElementById("titleinput").value;
+        }
+        function rollback(){
+            document.getElementById("changetext").innerText=document.getElementById("changetext").innerText.split(" ").join("");
+        }
+        function changesize(operator){
+            if(operator='minus'){
+                (document.getElementById("changetext").style.fontSize="32px");
+                //console.log(x)
+            }else if(operator='plus'){
+
+            }
+        }
+
+         
+     </script>
+
+</html>
