@@ -6,15 +6,23 @@
 </title>
     </head>
     <body style="background-color:white;">
-        <h2 id="changetext" style="color: blueviolet;">LOVE</h2>
-        <button style="background-color: blue; color:white ;" onclick="spreadfunction()">spread</button>
-        <button onclick="rollback()">rollback</button>
-        <button onclick="changesize('minus')">-</button>
-        <button onclick="changesize('plus')">+</button>
+        <div style="text-align: center;">
         
-        <p></p>
-        <input id="titleinput"/>
-        
+            <button onclick="spreadfunction()">spread</button>
+            <button onclick="rollback()">rollback</button>
+            <button onclick="changesize('minus')">-</button>
+            <button onclick="changesize('plus')">+</button>
+            <br>
+            <button onclick="decoration('underline')">underline</button>
+            <button onclick="decoration('overline')">overline</button>
+            <button onclick="decoration('linethrough')">linethrough</button>
+            <button onclick="decoration('both')">both</button>
+            <button onclick="decoration('clear')">clear</button>
+
+            <br>
+            <input id="titleinput"/>
+            <h2 id="changetext" style="color: blueviolet;">LOVE</h2>
+        </div>
     </body>
      <script>
         function spreadfunction() {
@@ -28,13 +36,32 @@
             document.getElementById("changetext").innerText=document.getElementById("changetext").innerText.split(" ").join("");
         }
         function changesize(operator){
-            if(operator='minus'){
-                var fontSize = parseFloat(window.getComputedStyle(document.getElementById("changetext"), null).getPropertyValue('font-size'));
+            var fontSize = parseFloat(window.getComputedStyle(document.getElementById("changetext"), null).getPropertyValue('font-size'));
+            if(operator=='minus'){
+                
                 document.getElementById("changetext").style.fontSize = (fontSize - 1) + 'px';
-            }else if(operator='plus'){
+                
+            }else if(operator=='plus'){
+                document.getElementById("changetext").style.fontSize = (fontSize + 1) + 'px';
+                
 
             }
         }
+        function decoration(rico){
+            if(rico=='underline'){
+                document.getElementById("changetext").style.textDecoration="underline";
+            
+            }else if(rico=='overline'){
+                document.getElementById("changetext").style.textDecoration="overline";
+            }else if(rico=='linethrough'){
+                document.getElementById("changetext").style.textDecoration="line-through";
+            }else if(rico=='both'){
+                document.getElementById("changetext").style.textDecoration="overline underline";
+            }else if(rico=='clear'){
+                document.getElementById("changetext").style.textDecoration="";
+            }
+        }
+
 
          
      </script>
