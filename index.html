@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 </head>
 <body>
+<button onclick="underline()">underline</button>
+<p id="ex">underline text decoration.</p>
 
-<h2>Title</h2>
-<p>This is a paragraph.</p>
+<p><strong>Note:</strong> It is not recommended to underline text that is not a link, as this often confuses 
+the reader.</p>
 
 </body>
 <script>
-    var el = document.getElementById('foo');
-    var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
-    var fontSize = parseFloat(style); 
-    // now you have a proper float for the font size (yes, it can be a float, not just an integer)
-    el.style.fontSize = (fontSize + 1) + 'px';
+function underline(){
+	document.getElementById("ex").style.textDecoration = "underline";
+}
 </script>
 </html>
+
+
