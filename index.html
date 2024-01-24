@@ -9,4 +9,11 @@
 <p>This is a paragraph.</p>
 
 </body>
+<script>
+    var el = document.getElementById('foo');
+    var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+    var fontSize = parseFloat(style); 
+    // now you have a proper float for the font size (yes, it can be a float, not just an integer)
+    el.style.fontSize = (fontSize + 1) + 'px';
+</script>
 </html>

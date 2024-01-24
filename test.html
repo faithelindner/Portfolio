@@ -29,8 +29,8 @@
         }
         function changesize(operator){
             if(operator='minus'){
-                (document.getElementById("changetext").style.fontSize="32px");
-                //console.log(x)
+                var fontSize = parseFloat(window.getComputedStyle(document.getElementById("changetext"), null).getPropertyValue('font-size'));
+                document.getElementById("changetext").style.fontSize = (fontSize - 1) + 'px';
             }else if(operator='plus'){
 
             }
