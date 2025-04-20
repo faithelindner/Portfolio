@@ -1,12 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .projects {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .project-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
 
-</body>
-<script>
+  <header>
+    <h1>Your Name</h1>
+    <p>Game Developer • Artist • Storyteller</p>
+  </header>
 
-</script>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a creative developer with a passion for crafting immersive experiences. From VR worlds to 2D games and interactive art installations, I love turning wild ideas into playable realities.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project Goopy</h3>
+        <p>A slime-themed puzzle game where a lab experiment breaks free through clever mechanics and silly goo physics.</p>
+      </div>
+      <div class="project-card">
+        <h3>Rat in the Kitchen</h3>
+        <p>VR puzzle game where you play as a rat solving challenges in a cozy kitchen to win cheese glory.</p>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Unreal Engine / Unity</li>
+      <li>Blender & 3D Modeling</li>
+      <li>Arduino / Physical Computing</li>
+      <li>HTML / CSS / JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 faithlindner@gmail.com</p>
+    <p>📍 Based in Texas</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Faith Lindner. All rights reserved.
+  </footer>
+
+</body>
 </html>
